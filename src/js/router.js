@@ -19,7 +19,8 @@ class Router{
         });
         console.log(newRoutes);
         const selectedRoute=newRoutes.find(item=>item.isLocated===true);
-        selectedRoute.item.view()
-    }
+        selectedRoute.item.view();
+    };
+    
 };
 export default new Router();
