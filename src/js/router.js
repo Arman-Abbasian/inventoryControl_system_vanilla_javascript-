@@ -3,7 +3,7 @@ import AddNewProduct from "./pages/AddNewProduct.js";
 const body=document.querySelector("body")
 
 const routes=[
-    {path:"/public/index.html",view:()=>AddNewProduct.addNewProductpage()},
+    {path:"/public/index.html",view:()=>AddNewProduct},
     {path:"/public/index.html/addNewProduct",view:()=>AddNewProduct.addNewProductpage()},
     {path:"/public/index.html/inventoryControl",view:()=>AddNewProduct.addNewProductpage()}
 

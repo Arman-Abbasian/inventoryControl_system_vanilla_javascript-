@@ -1,11 +1,10 @@
+import  { visual } from "../visualPages/AddNewProductVisual.js";
+
 const main=document.querySelector("main")
 class AddNewProduct{
     constructor(){
-
+        main.innerHTML=visual;
+        this.newProduct={productName:"",productSpecification:"",measurmentUnit:""}
     };
-addNewProductpage(){
-    main.innerHTML=`<p>hello add new product</p>` 
-    console.log(main)
-};
 }
 export default new AddNewProduct();
