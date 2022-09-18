@@ -1,9 +1,21 @@
 import { addNewProductvisual } from "../visualPages/AddNewProductVisual.js";
+import Notify from 'notifyjs';
 const main=document.querySelector("main")
 
 
 class AddNewProduct{
     constructor(){
+
+        var myNotification = new Notify('Yo dawg!', {
+            body: 'This is an awesome notification',
+            notifyShow: onNotifyShow
+        });
+        
+        function onNotifyShow() {
+            console.log('notification was shown!');
+        };
+        myNotification.show();
+
         main.innerHTML=addNewProductvisual;
         this.newProduct={productName:"",productSpecification:"",measurementUnit:""};
         //beacuse this add just by js to dom you can not add this two element at top of the this code
@@ -24,7 +36,13 @@ class AddNewProduct{
             console.log(this.newProduct);
             this.productName.value="";
             this.productSpecification.value="";
-            [...this.unit].forEach(item=>item.value="");
+            [...this.unit].forEach(item=>{
+                item.removeAttribute("checked");
+                item.checked=false;
+            
+            });
+            this.newProduct={productName:"",productSpecification:"",measurementUnit:""};
+            console.log(this.newProduct)
         })
 
       
