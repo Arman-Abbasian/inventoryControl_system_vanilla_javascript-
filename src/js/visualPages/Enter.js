@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/output.css" />
-    <title>enter</title>
-</head>
-<body class="bg-gray-800 text-gray-300 p-4">
-    <div class="p-2 drop-shadow-lg bg-gray-700 rounded-md">
+export const enter=`
+<div class="p-2 drop-shadow-lg bg-gray-700 rounded-md">
     <form class="flex flex-col justify-center items-center gap-y-5 p-2 drop-shadow-md container max-w-sm mx-auto">
         <div class="w-full">
             <input list="productName" class="ring-1 ring-blue-500 rounded-sm p-2 focus:outline-none text-black w-full">
@@ -68,6 +59,4 @@
             </div>
             <button class="px-4 py-2 bg-blue-500 rounded-sm drop-shadow-lg hover:bg-blue-400 w-full">Add product</button>
     </form>
-</div>
-</body>
-</html>
+`

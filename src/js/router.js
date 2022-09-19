@@ -6,8 +6,8 @@ import InvetoryControl from './pages/InventoryControl.js';
 const body=document.querySelector("body")
 
 const routes=[
-    {path:"/public/index.html",view:()=>AddNewProduct},
-    {path:"/public/index.html/addNewProduct",view:()=>AddNewProduct},
+    {path:"/public/index.html",view:()=>new AddNewProduct()},
+    {path:"/public/index.html/addNewProduct",view:()=>new AddNewProduct()},
     {path:"/public/index.html/enter",view:()=>new Enter()},
     {path:"/public/index.html/exit",view:()=>new Exit()},
     {path:"/public/index.html/invetoryControl",view:()=>new InvetoryControl()}

@@ -56,4 +56,4 @@ class AddNewProduct{
 
 
     };
-export default new AddNewProduct();
+export default AddNewProduct;
