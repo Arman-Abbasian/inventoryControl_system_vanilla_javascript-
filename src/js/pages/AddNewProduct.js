@@ -20,7 +20,7 @@ class AddNewProduct{
     };
 
 
-    
+
     productNameInputHandler(e){
         this.newProduct.productName=e.target.value
     };
