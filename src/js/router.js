@@ -20,6 +20,15 @@ class Router{
         console.log(newRoutes);
         const selectedRoute=newRoutes.find(item=>item.isLocated===true);
         selectedRoute.item.view();
+        //make links for <a> tags
+        const a= document.querySelectorAll("a");
+        [...a].forEach(item=>{
+            console.log(item.getAttribute("href"))
+           item.addEventListener("click",(e)=>{
+            e.preventDefault();
+            history.pushState(null,null,e.target.getAttribute("href"));
+           })
+        })
     };
     
 };

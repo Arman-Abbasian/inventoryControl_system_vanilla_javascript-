@@ -1,0 +1,28 @@
+{
+  "newProducts": [
+    {
+      "productName": "cover 405",
+      "productSpecification": "door 15",
+      "measurementUnit": "number",
+      "id": 1
+    },
+    {
+      "productName": "cover 206",
+      "productSpecification": "door 18",
+      "measurementUnit": "number",
+      "id": 2
+    },
+    {
+      "productName": "cover 2008",
+      "productSpecification": "door 20",
+      "measurementUnit": "number",
+      "id": 3
+    },
+    {
+      "productName": "cover Tiba",
+      "productSpecification": "door 45",
+      "measurementUnit": "number",
+      "id": 4
+    }
+  ]
+}
