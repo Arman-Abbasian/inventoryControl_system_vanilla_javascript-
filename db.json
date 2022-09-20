@@ -23,6 +23,63 @@
       "productSpecification": "door 45",
       "measurementUnit": "number",
       "id": 4
+    },
+    {
+      "productName": "cover 405",
+      "productSpecification": "door 45",
+      "measurementUnit": "number",
+      "id": 5
     }
+  ],
+
+
+
+
+
+
+
+  "personnel": [
+    {
+      "name": "Ali Kamrani",
+      "unit": "perssing",
+      "id": 1
+    },
+    {
+      "name": "Ahmad Haghbin",
+      "unit": "perssing",
+      "id": 2
+    },
+    {
+      "name": "Yousef Rostami",
+      "unit": "welding",
+      "id": 3
+    },
+    {
+      "name": "Reza Mozooni",
+      "unit": "diecasting",
+      "id": 4
+    },
+    {
+      "name": "Maryam Hasani",
+      "unit": "Official",
+      "id": 5
+    }
+  ],
+
+  "storePersonnel": [
+    {
+      "name": "Bahmen Ghayoury",
+      "id": 1
+    },
+    {
+      "name": "Abasali Sadin",
+      "id": 2
+    },
+    {
+      "name": "Saber Yari",
+      "id": 3
+    }
+
   ]
+
 }
