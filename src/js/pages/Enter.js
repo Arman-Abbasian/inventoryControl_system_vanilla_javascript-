@@ -4,29 +4,31 @@ class Enter{
     constructor(){
         //make the content of this page
         main.innerHTML=enter;
+        this.productOptions=[];
         //inital container
-        this.enterData={selectedProductName:"",selectedSpecification:"",selectedDate:"",selectedNumber:null,selectedRecipent:"",selectedDelivered:[]};
+        this.enterData={selectedProductName:"",selectedSpecification:"",selectedDate:"",selectedNumber:null,selectedSupplier:"",selectedRecipent:"",selectedDelivered:[],transfree:""};
         //get the element
         this.productNameInput=document.querySelector("#productNameInput");
         this.productNameDataList=document.querySelector("#productNameDataList");
         this.productSpecification=document.querySelector("#productSpecification");
         this.dateInput=document.querySelector("#dateInput");
         this.numberOfProductInput=document.querySelector("#numberOfProductInput");
-        this.selectedRecipentSelectInput=document.querySelector("#selectedRecipentSelectInput");
-        this.selectedRecipentDataList=document.querySelector("#selectedRecipentDataList");
+        this.selectedSupplierSelectInput=document.querySelector("#selectedSupplierSelectInput");
+        this.selectedSupplierDataList=document.querySelector("#selectedSupplierDataList");
         this.selectedDeliveredCheckbox=document.querySelector("#selectedDeliveredCheckbox");
+        this.selectedTransfreeInputSelect=document.querySelector("#selectedTransfreeInputSelect");
+        this.selectedTransfreeDataList=document.querySelector("#selectedTransfreeDataList");
         this.addDataButton=document.querySelector("#addDataButton");
         //event for tags
         this.productNameInput.addEventListener("change",(e)=>this.productNameInputHandler(e));
         this.productSpecification.addEventListener("change",(e)=>this.productSpecificationSelectHandler(e));
         this.dateInput.addEventListener("change",(e)=>this.dateInputHandler(e));
         this.numberOfProductInput.addEventListener("change",(e)=>this.numberOfProductInputHandler(e));
-        this.selectedRecipentSelectInput.addEventListener("change",(e)=>this.selectedRecipentSelectInputHandler(e));
+        this.selectedSupplierSelectInput.addEventListener("change",(e)=>this.selectedSupplierSelectInputHandler(e));
         this.addDataButton.addEventListener("click",(e)=>this.addDataButtonHandler(e));
         this.fillProductOption()
         this.fillPersonnelRecipentOptions();
         this.makeselectedDeliveredCheckbox();
-        this.productOptions=[];
         
     }
 
@@ -55,7 +57,7 @@ class Enter{
             data.forEach(item => {
                 personnelContainer+=`<option value='${item.name}'>${item.name}</option>`
             });
-            this.selectedRecipentDataList.innerHTML=personnelContainer;
+            this.selectedSupplierDataList.innerHTML=personnelContainer;
         })
         .catch(err=>console.log(err))
     };
