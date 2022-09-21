@@ -31,13 +31,6 @@
       "id": 5
     }
   ],
-
-
-
-
-
-
-
   "personnel": [
     {
       "name": "Ali Kamrani",
@@ -65,7 +58,32 @@
       "id": 5
     }
   ],
-
+  "exit": [
+    {
+      "selectedProductName": "cover Tiba",
+      "selectedSpecification": "door 45",
+      "selectedDate": "2022-09-05T00:00:00.000Z",
+      "selectedNumber": 41000,
+      "selectedRecipent": "Ahmad Haghbin",
+      "selectedDelivered": [
+        "Bahmen Ghayoury",
+        "Abasali Sadin"
+      ],
+      "id": 1
+    },
+    {
+      "selectedProductName": "cover 405",
+      "selectedSpecification": "door 45",
+      "selectedDate": "2022-09-12T00:00:00.000Z",
+      "selectedNumber": 2000,
+      "selectedRecipent": "",
+      "selectedDelivered": [
+        "Saber Yari"
+      ],
+      "id": 2
+    }
+   
+  ],
   "storePersonnel": [
     {
       "name": "Bahmen Ghayoury",
@@ -79,7 +97,5 @@
       "name": "Saber Yari",
       "id": 3
     }
-
   ]
-
 }

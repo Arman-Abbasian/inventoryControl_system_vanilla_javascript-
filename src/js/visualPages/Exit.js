@@ -1,4 +1,4 @@
-export const enter=`
+export const exit=`
 <div class="p-2 drop-shadow-lg bg-gray-700 rounded-md">
     <form class="flex flex-col justify-center items-center gap-y-5 p-2 drop-shadow-md container max-w-sm mx-auto">
         <div class="w-full">

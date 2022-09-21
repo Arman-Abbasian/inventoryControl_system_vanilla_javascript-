@@ -15,14 +15,14 @@ class Enter{
         this.selectedRecipentSelectInput=document.querySelector("#selectedRecipentSelectInput");
         this.selectedRecipentDataList=document.querySelector("#selectedRecipentDataList");
         this.selectedDeliveredCheckbox=document.querySelector("#selectedDeliveredCheckbox");
-        console.log(this.productSpecification.value)
+        this.addDataButton=document.querySelector("#addDataButton");
         //event for tags
         this.productNameInput.addEventListener("change",(e)=>this.productNameInputHandler(e));
         this.productSpecification.addEventListener("change",(e)=>this.productSpecificationSelectHandler(e));
         this.dateInput.addEventListener("change",(e)=>this.dateInputHandler(e));
         this.numberOfProductInput.addEventListener("change",(e)=>this.numberOfProductInputHandler(e));
         this.selectedRecipentSelectInput.addEventListener("change",(e)=>this.selectedRecipentSelectInputHandler(e));
-        this.selectedDeliveredCheckbox.addEventListener("change",(e)=>this.selectedDeliveredCheckboxHandler(e))
+        this.addDataButton.addEventListener("click",(e)=>this.addDataButtonHandler(e));
         this.fillProductOption()
         this.fillPersonnelRecipentOptions();
         this.makeselectedDeliveredCheckbox();
@@ -40,11 +40,9 @@ class Enter{
             this.productOptions=uniqueProductNameOptions;
             let productOptionsContainer="";
             this.productOptions.forEach(item=>{
-                console.log(item)
                 productOptionsContainer+=`<option value='${item}'>`
             });
             this.productNameDataList.innerHTML=productOptionsContainer;
-            console.log(this.productNameDataList)
         })
         .catch(err=>console.log(err))
     };
@@ -57,7 +55,6 @@ class Enter{
             data.forEach(item => {
                 personnelContainer+=`<option value='${item.name}'>${item.name}</option>`
             });
-
             this.selectedRecipentDataList.innerHTML=personnelContainer;
         })
         .catch(err=>console.log(err))
@@ -77,15 +74,15 @@ class Enter{
                 `
             });
             this.selectedDeliveredCheckbox.innerHTML=storePersonnelContainer;
-
             const wholeCheckBoxes=document.querySelectorAll(".sotrePersonnelCheckbox");
             const wholeCheckBoxesArray=[...wholeCheckBoxes]
             const initialAyyar=null;
             wholeCheckBoxes.forEach(item=>{
                 item.addEventListener("change",()=>{
+                    this.enterData.selectedDelivered=[];
                    const checkedItems= wholeCheckBoxesArray.filter(item=>item.checked===true);
-                   console.log(checkedItems.getAttribute("value"))
-                })
+                   checkedItems.forEach(item=>this.enterData.selectedDelivered.push(item.value));
+                });
             })
         })
         .catch(err=>console.log(err));
@@ -118,24 +115,23 @@ class Enter{
     };
     dateInputHandler(e){
        const date= (e.target.value);
-       console.log(new Date(date))
        const dateString=new Date(date).toISOString();
-       this.enterData.selectedDate=dateString;
-       console.log(this.enterData)
-       
+       this.enterData.selectedDate=dateString;   
     };
 
     numberOfProductInputHandler(e){
         this.enterData.selectedNumber=parseInt(e.target.value);
-        console.log(this.enterData)
     };
 
     selectedRecipentSelectInputHandler(e){
         this.enterData.selectedRecipent=e.target.value;
-        console.log(this.enterData)
     };
-    selectedDeliveredCheckboxHandler(e){
-        console.log(e.target.value)
+    addDataButtonHandler(e){
+        e.preventDefault();
+        axios.post("http://localhost:4000/exit",this.enterData);
+        e.preventDefault();
+        this.enterData={selectedProductName:"",selectedSpecification:"",selectedDate:"",selectedNumber:null,selectedRecipent:"",selectedDelivered:[]};
+
     }
 };
-export default  Enter;
+export default Enter;
