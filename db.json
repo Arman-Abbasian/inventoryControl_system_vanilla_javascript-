@@ -82,7 +82,21 @@
       ],
       "id": 2
     }
-   
+  ],
+  "enter": [
+    {
+      "selectedProductName": "cover 405",
+      "selectedSpecification": "door 45",
+      "selectedDate": "2022-09-06T00:00:00.000Z",
+      "selectedNumber": 4100,
+      "selectedSupplier": "Afshari",
+      "selectedDelivered": [
+        "Abasali Sadin",
+        "Saber Yari"
+      ],
+      "transfree": "ddd",
+      "id": 1
+    }
   ],
   "storePersonnel": [
     {
@@ -96,6 +110,38 @@
     {
       "name": "Saber Yari",
       "id": 3
+    }
+  ],
+  "suppliers": [
+    {
+      "name": "kamkan",
+      "address": "tehran",
+      "tel": "02158741258",
+      "id": 1
+    },
+    {
+      "name": "beizaie",
+      "address": "fardis",
+      "tel": "09335874147",
+      "id": 2
+    },
+    {
+      "name": "Afshari",
+      "address": "fardis",
+      "tel": "026365417",
+      "id": 3
+    }
+  ],
+  "transfree": [
+    {
+      "name": "Hossein Safari",
+      "tel": "093315874147",
+      "id": 1
+    },
+    {
+      "name": "Mostafa Yousefi",
+      "tel": "09335874147",
+      "id": 2
     }
   ]
 }
