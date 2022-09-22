@@ -1,4 +1,4 @@
-import { mainPage } from "../visualPages/Main";
+import { mainPage } from "../visualPages/Main.js";
 const main=document.querySelector("main");
 
 class MainPage{
@@ -6,4 +6,4 @@ class MainPage{
         main.innerHTML=mainPage;
     }
 };
-export default MainPage;
+export default  MainPage;
