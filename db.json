@@ -60,18 +60,6 @@
   ],
   "exit": [
     {
-      "selectedProductName": "cover Tiba",
-      "selectedSpecification": "door 45",
-      "selectedDate": "2022-09-05T00:00:00.000Z",
-      "selectedNumber": 41000,
-      "selectedRecipent": "Ahmad Haghbin",
-      "selectedDelivered": [
-        "Bahmen Ghayoury",
-        "Abasali Sadin"
-      ],
-      "id": 1
-    },
-    {
       "selectedProductName": "cover 405",
       "selectedSpecification": "door 45",
       "selectedDate": "2022-09-12T00:00:00.000Z",
@@ -96,6 +84,18 @@
       ],
       "transfree": "ddd",
       "id": 1
+    },
+    {
+      "selectedProductName": "cover 2008",
+      "selectedSpecification": "door 20",
+      "selectedDate": "2022-09-06T00:00:00.000Z",
+      "selectedNumber": 5200,
+      "selectedSupplier": "beizaie",
+      "selectedDelivered": [
+        "Abasali Sadin"
+      ],
+      "transfree": "",
+      "id": 2
     }
   ],
   "storePersonnel": [

@@ -2,11 +2,12 @@ import AddNewProduct from "./pages/AddNewProduct.js";
 import Enter from './pages/Enter.js';
 import Exit from './pages/Exit.js';
 import InvetoryControl from './pages/InventoryControl.js';
+import MainPage from "./pages/MainPage.js";
 
 const body=document.querySelector("body")
 
 const routes=[
-    {path:"/public/index.html",view:()=>new AddNewProduct()},
+    {path:"/public/index.html",view:()=>new MainPage()},
     {path:"/public/index.html/addNewProduct",view:()=>new AddNewProduct()},
     {path:"/public/index.html/enter",view:()=>new Enter()},
     {path:"/public/index.html/exit",view:()=>new Exit()},
